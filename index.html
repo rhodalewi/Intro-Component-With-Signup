@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="./app.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="container-text">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="container-form">
+        <h4>Try it free 7 days<span> then $20/mo. thereafter</span></h4>
+
+        <form id="form">
+          <!-- FIRST NAME -->
+          <div class="inputs">
+            <label for="firstName">
+              <input type="text" class="firstName" placeholder="First Name">
+              <p class="errorsMsg"><!-- First Name cannot be empty --></p>
+              <img src="./images/icon-error.svg" class="icon-error img">
+            </label>
+          </div>
+
+           <!-- LAST NAME -->
+          <div class="inputs">
+            <label for="lastName">
+              <input type="text" class="lastName" placeholder="Last Name">
+              <p class="errorsMsg lastNameErrors"><!-- Last Name cannot be empty --></p>
+              <img src="./images/icon-error.svg" class="lastName-Icon icon-error img">
+            </label>
+          </div>
+
+           <!-- EMAIL ADDRESS -->
+          <div class="inputs">
+            <label for="email">
+              <input type="email" class="email" placeholder="Email Address">
+              <p class="errorsMsg emailErrors"><!-- Looks like this is not an email --></p>
+              <img src="./images/icon-error.svg" class="email-Icon icon-error img">
+            </label>
+          </div>
+          
+           <!-- PASSWORD -->
+          <div class="inputs">
+            <label for="password">
+              <input type="password" class="password" placeholder="Password">
+              <p class="errorsMsg passwordErrors"><!-- Password cannot be empty --></p>
+              <img src="./images/icon-error.svg" class="password-Icon icon-error img">
+              <i class='bx bx-show hide-show' style='color:#696666'></i>
+            </label>
+          </div>
+
+          <button id="button">Claim your free trial</button>
+          <small>By clicking the button, you are agreeing to our <a>Terms and Services </a></small>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

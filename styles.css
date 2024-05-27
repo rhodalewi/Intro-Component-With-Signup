@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('./images/bg-intro-desktop.png') no-repeat center;
+  background-color: var(--red);
+  background-size: cover;
+  /* width: 100vw; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.container-text,
+.container-form {
+  flex: 1;
+}
+
+h1 {
+  color: white;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: white;
+  font-size: 1.05rem;
+  opacity: 90%;
+}
+
+h4 {
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.35);
+  margin-bottom: 1.5rem;
+}
+
+h4 span {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+input {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--grayish-blue);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.inputs {
+ padding-bottom: 0.5rem;
+}
+
+.inputs .errorsMsg {
+  float: right;
+  font-size: 0.6rem;
+  font-style: italic;
+  color: var(--red);
+  padding-top: 0.3rem;
+  font-weight: 600;
+  position: relative;
+}
+
+input.error {
+  border: 2px solid var(--red);
+}
+
+input[type="email"].new-placeholder::placeholder {
+  color: var(--red);
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+input:hover,
+input:focus {
+  outline: 1.5px solid var(--blue);
+}
+
+.icon-error {
+  position: relative;
+  bottom: 42px;
+  left: 300px;
+}
+
+.img {
+  display: none;
+}
+
+.hide-show {
+  font-size: 24px;
+  position: relative;
+  bottom: 42px;
+  color: #3f3f3f;
+  left: 230px;
+}
+
+
+button {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  filter: drop-shadow(1px 4px hsl(154, 47%, 47%));
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+  filter: drop-shadow(1px 5px hsla(154, 63%, 29%, 0.74));
+
+}
+
+ small {
+  color: var(--grayish-blue);
+}
+
+small a{
+  color: var(--red);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 1440px) {
+  
+  .icon-error {
+    position: relative;
+    bottom: 42px;
+    left: 280px;
+  }
+
+  .password-Icon {
+    left: 288px;
+  }
+
+  .hide-show {
+    font-size: 24px;
+    position: relative;
+    bottom: 42px;
+    color: #3f3f3f;
+    left: 210px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    height: 100%;
+    background-image: url(./images/bg-intro-mobile.png);
+  }
+  .container {
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+    margin: 6rem auto 4.6rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    width: fit-content;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 1.06rem;
+    margin-bottom: 1.2rem;
+  }
+
+  h4 {
+    padding: 1.2rem ;
+  }
+
+  form {
+    padding: 1.6rem 1rem;
+  }
+
+  input {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+ .icon-error {
+    position: relative;
+    bottom: 48px;
+    left: 188px;
+  }
+
+  .password-Icon {
+    left: 193px;
+  }
+
+  .hide-show {
+    font-size: 20px;
+    position: relative;
+    bottom: 44px;
+    color: #3f3f3f;
+    left: 120px;
+  } 
+}
