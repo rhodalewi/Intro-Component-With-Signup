@@ -74,6 +74,7 @@ form.addEventListener('submit', (e) => {
     passwordError.innerHTML = "Password cannot be empty";
     password.placeholder = '';
     passwordIcon.classList.remove('img');
+    eyeIcon.classList.remove('hide-show');
   } 
   else {
     password.classList.remove('error');
