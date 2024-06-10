@@ -39,6 +39,8 @@ form.addEventListener('submit', (e) => {
   } 
   else {
     firstName.classList.remove('error');
+    errorMessage.innerHTML = "";
+    iconError.classList.add('img');
   }
   // Check last name
 
@@ -50,6 +52,8 @@ form.addEventListener('submit', (e) => {
   } 
   else {
     lastName.classList.remove('error');
+    lastNameErrorMsg.innerHTML = '';
+    lastNameIcon.classList.add('img');
   }
 
   
@@ -65,6 +69,8 @@ form.addEventListener('submit', (e) => {
   } 
   else {
     email.classList.remove('error');
+    emailErrorMsg.innerHTML = "";
+    emailIcon.classList.add('img');
   }
 
   // Check password
@@ -78,6 +84,9 @@ form.addEventListener('submit', (e) => {
   } 
   else {
     password.classList.remove('error');
+    passwordError.innerHTML = "";
+    passwordIcon.classList.add('img');
+    eyeIcon.classList.add('hide-show');
   }
 });
 
